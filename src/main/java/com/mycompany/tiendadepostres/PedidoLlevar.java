@@ -22,10 +22,15 @@ public class PedidoLlevar {
        this.Cliente= Cliente;
        this.Cantidad= Cantidad;
    }
-   public void Registrar (String Pedido, String Cliente, int Cantidad ){
+   public String Registrar (String Pedido, String Cliente, int Cantidad ){
        ListaEnlazada lis = new ColaEnlazada();
        lis.add(Pedido + ", " + Cliente + ", " +Cantidad);
-       System.out.println(lis);
+       //System.out.println(lis);
+       return lis + ", ";
+   }
+   
+   public String toString(){
+       return "";
    }
     //guarda en una lista de pedido, la informacion del cliente
 }
