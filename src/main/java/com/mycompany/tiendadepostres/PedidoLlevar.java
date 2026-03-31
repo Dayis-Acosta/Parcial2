@@ -6,7 +6,7 @@ import com.murcia.utils.*;
 public class PedidoLlevar {
     
    private String Pedido;
-   private String Cliente;
+   private Cliente Cliente;
    private int Cantidad;
    
   
@@ -17,14 +17,15 @@ public class PedidoLlevar {
        // cantidad de postres que quiere el cliente en el pedido
        return CantRequerida;
    }
-   public PedidoLlevar (String Pedido, String Cliente, int Cantidad){
+   public PedidoLlevar (String Pedido, Cliente Cliente, int Cantidad){
        this.Pedido = Pedido;
        this.Cliente= Cliente;
        this.Cantidad= Cantidad;
    }
-   public void Registrar (){
+   public void Registrar (String Pedido, String Cliente, int Cantidad ){
        ListaEnlazada lis = new ColaEnlazada();
-       lis.add(1);
+       lis.add(Pedido + ", " + Cliente + ", " +Cantidad);
+       System.out.println(lis);
    }
     //guarda en una lista de pedido, la informacion del cliente
 }

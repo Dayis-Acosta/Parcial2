@@ -6,7 +6,7 @@ import com.murcia.utils.*;
 public class TiendaDePostres {
 
     public static void main(String[] args) {
-      /*final char SALIR = '3';
+     /* final char SALIR = '3';
         String []opt = {"1. Comanda", "2. Para llevar", "3. Terminar"};
         Menu mnu = new Menu(opt, 'V', " ", "Tienda de Postes EeveeBuron");
         char opc;
@@ -25,14 +25,14 @@ public class TiendaDePostres {
                System.out.println("pedido llevar");
             }
         } while (opc != SALIR);*/
-        
-        
-       ListaEnlazada lis = new ColaEnlazada();
-       lis.add(1);
-        System.out.println(lis);
+        String a, b, c;
+        PedidoLlevar p=new PedidoLlevar();
+        a=Input.nextLine("Ingrese postre: ");
+        b=Input.nextLine("Ingrese Datos: ");
+        c=Input.nextLine("Ingrese cantidad: ");
+        p.Registrar(a, b, 2);
+        System.out.println(p);
+     
     }  
-    
-    
-    
     
 }
