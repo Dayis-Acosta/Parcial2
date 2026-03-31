@@ -5,17 +5,21 @@ package com.mycompany.tiendadepostres;
 public class Cliente {
    //Atributos
     private String nomCliente;
-    private int telCliente;
+    private String telCliente;
     private String direcCliente;
   
     //metodos
     
     public Cliente () {} 
     
-    public String IngresoCliente (){
-        //medodo ingreso de cliente
-        
-        return "";
+    public Cliente (String nombre, String telefono, String direccion){
+        this.nomCliente = nombre;
+        this.telCliente = telefono;
+        this.direcCliente = direccion;
+    }
+    
+    public String toString(){
+    return "";
     }
     
     
