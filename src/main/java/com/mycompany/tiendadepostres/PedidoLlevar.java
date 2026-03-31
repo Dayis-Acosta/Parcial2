@@ -3,7 +3,11 @@ package com.mycompany.tiendadepostres;
 
 
 public class PedidoLlevar {
-   private int CantRequerida;
+    
+   private String Pedido;
+   private String Cliente;
+   private int Cantidad;
+   
   
    //metodo
    public PedidoLlevar(){}
@@ -12,5 +16,10 @@ public class PedidoLlevar {
        // cantidad de postres que quiere el cliente en el pedido
        return CantRequerida;
    }
-    
+   public PedidoLlevar (String Pedido, String Cliente, int Cantidad){
+       this.Pedido = Pedido;
+       this.Cliente= Cliente;
+       this.Cantidad= Cantidad;
+   }
+    //guarda en una lista de pedido, la informacion del cliente
 }
