@@ -17,6 +17,15 @@ public class Cliente {
         this.telCliente = telefono;
         this.direcCliente = direccion;
     }
+    public String getnomCliente(){
+        return nomCliente;
+    }
+    public String gettelCliente(){
+        return telCliente;
+    }
+    public String getdirecCliente(){
+        return direcCliente;
+    }
     
     public String toString(){
     return "Nombre del Cliente: " + nomCliente + 
