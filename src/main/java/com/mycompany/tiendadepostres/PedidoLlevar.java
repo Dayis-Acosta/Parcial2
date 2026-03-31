@@ -1,6 +1,7 @@
 
 package com.mycompany.tiendadepostres;
 
+import com.murcia.utils.*;
 
 public class PedidoLlevar {
     
@@ -20,6 +21,10 @@ public class PedidoLlevar {
        this.Pedido = Pedido;
        this.Cliente= Cliente;
        this.Cantidad= Cantidad;
+   }
+   public void Registrar (){
+       ListaEnlazada lis = new ColaEnlazada();
+       lis.add(1);
    }
     //guarda en una lista de pedido, la informacion del cliente
 }
