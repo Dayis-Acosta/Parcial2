@@ -19,7 +19,9 @@ public class Cliente {
     }
     
     public String toString(){
-    return "";
+    return "Nombre del Cliente: " + nomCliente + 
+            "Telefono del Cliente: " + telCliente + 
+            "Direccion: " + direcCliente;
     }
     
     
