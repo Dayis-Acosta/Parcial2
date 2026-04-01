@@ -21,11 +21,13 @@ public class Postre {
     public int getPorciones() {
         return porciones;
     }
-    
-    public String ListaPostres (String nPostres){
-        //se genera la lista de postres
-        return nPostres;
+    public void setPorciones(int porciones) {
+        this.porciones = porciones;
     }
-    
+    @Override
+    public String toString() {
+        return nombrep + " - " + porciones;
+    }
+   
     
 }
