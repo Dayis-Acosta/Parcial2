@@ -7,7 +7,10 @@ public class Comanda {
     private int cantMesa;
     
     public Comanda(){}
-   
+    public Comanda(int nmesa, int cantmesa) {
+        this.nmesa = nmesa;
+        this.cantMesa = cantmesa;
+    }
    public int Mesa (int cantMesa){
        //saber si hay mesas libres o no
        return cantMesa;
@@ -22,4 +25,8 @@ public class Comanda {
    public int pedidoEntregado (){
        return 0;
    }
+    public void mostrarComanda(){
+        System.out.println("Número de mesa: " + nmesa);
+        System.out.println("Cantidad en mesa: " + cantMesa);
+    }
 }
