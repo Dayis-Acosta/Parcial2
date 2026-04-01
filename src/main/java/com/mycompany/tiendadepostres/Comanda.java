@@ -11,20 +11,22 @@ public class Comanda {
         this.nmesa = nmesa;
         this.cantMesa = cantmesa;
     }
-   public int Mesa (int cantMesa){
-       //saber si hay mesas libres o no
-       return cantMesa;
-   }
-   public int Ingreso(int nmesa){
-       // Lugar donde se quiere sentar
-       return nmesa;
-   }
-   public int eliminarPedido (){
-       return 0;
-   }
-   public int pedidoEntregado (){
-       return 0;
-   }
+    public int getNmesa() {
+        return nmesa;
+    }
+
+    public void setNmesa(int nmesa) {
+        this.nmesa = nmesa;
+    }
+
+    public int getCantmesa() {
+        return cantMesa;
+    }
+
+    public void setCantmesa(int cantmesa) {
+        this.cantMesa = cantmesa;
+    }
+   
     public void mostrarComanda(){
         System.out.println("Número de mesa: " + nmesa);
         System.out.println("Cantidad en mesa: " + cantMesa);
