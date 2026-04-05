@@ -6,30 +6,38 @@ import com.murcia.utils.*;
 public class TiendaDePostres {
 
     public static void main(String[] args) {
-        
-        final char SALIR = '3';
-        String []opt = {"1. Comanda", "2. Para llevar", "3. Terminar"};
+        ArmarPedido Comanda = new ArmarPedido();
+        ArmarPedido PedidoLlevar = new ArmarPedido();
+        final char SALIR = '5';
+        String []opt = {"1. Comanda", "2. Para llevar", "3. Mostrar pedidos comanda", 
+            "4. Mostrar pedidos para Llevar", "5. Terminar"};
         Menu mnu = new Menu(opt, 'V', " ", "Tienda de Postes EeveeBuron");
         char opc;
 
         do {
             Consola.clrscr(); // Borra pantalla
             Consola.gotoxy(0, 0);
-            opc = mnu.select("Su opción [1-3]: ");
+            opc = mnu.select("Su opción [1-5]: ");
             Input.nextLine("");
             if (opc == '1'){ //Comanda
                 Comanda();
-                
             }    
             if (opc == '2'){//pedido llevar
                PedidoLlevar();
-               
+            }
+            if (opc == '3'){//mostrar pedidos
+                System.out.println("Pedidos Comanda");
+                Comanda.mostrarPedido();
+            }
+            if (opc == '4'){//mostrar pedidos
+                System.out.println("Pedidos Para llevar");
+               PedidoLlevar.mostrarPedido();
             }
         } while (opc != SALIR);
         
     }  
     
-    public static void Comanda() {
+    public static String Comanda() {
         ArmarPedido Comanda = new ArmarPedido();
         String n, ps;
         int pr, m;
@@ -44,6 +52,7 @@ public class TiendaDePostres {
         
         Comanda co = new Comanda(m, pr, p, c);
         Comanda.AgregarPedido(co);
+        return Comanda + "";
     }
     public static void PedidoLlevar() {
         ArmarPedido PedidoLlevar = new ArmarPedido();
