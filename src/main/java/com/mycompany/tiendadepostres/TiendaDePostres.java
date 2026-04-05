@@ -8,8 +8,9 @@ public class TiendaDePostres {
     public static void main(String[] args) {
         
         MenuPostres menu = new MenuPostres();
-        ArmarPedido lisComanda = new ArmarPedido();
+        Comanda lisComanda = new Comanda();
         ArmarPedido lisPedidoLlevar = new ArmarPedido();
+        
         final char SALIR = '5';
         String []opt = {"1. Comanda", "2. Para llevar", "3. Mostrar pedidos comanda", 
             "4. Mostrar pedidos para Llevar", "5. Terminar"};
@@ -60,7 +61,7 @@ public class TiendaDePostres {
             }
             if (opc == '3'){//mostrar pedidos
                 System.out.println("PEDIDOS COMANDA" + "\n____________________________");
-                System.out.println(lisComanda.mostrarPedido());
+                System.out.println(lisComanda.mostrarComanda());
                 System.out.println("");
                 //Comanda.mostrarPedido();
             }
