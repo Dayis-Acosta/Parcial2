@@ -13,7 +13,7 @@ public class TiendaDePostres {
         System.out.println(menu.saboresTorta());
 
         
-        ArmarPedido Comanda = new ArmarPedido();
+        ArmarPedido lisComanda = new ArmarPedido();
         ArmarPedido PedidoLlevar = new ArmarPedido();
         final char SALIR = '5';
         String []opt = {"1. Comanda", "2. Para llevar", "3. Mostrar pedidos comanda", 
@@ -28,8 +28,10 @@ public class TiendaDePostres {
             Input.nextLine("");
             if (opc == '1'){ //Comanda
                 //Comanda();
+                
                 String n, ps;
                 int pr, m;
+                
                 n=Input.nextLine("Nombre cliente: ");
                 Cliente c = new Cliente(n, "No necesita", "No necesita");
                 
@@ -38,15 +40,18 @@ public class TiendaDePostres {
                 Postre p = new Postre(ps, pr);
                 
                 m = Input.nextInt("Numero de mesa: ");
+                
                 Comanda co = new Comanda(m, pr, p, c);
-                Comanda.AgregarPedido(co);
+                lisComanda.AgregarPedido(co);
+                
             }    
             if (opc == '2'){//pedido llevar
                PedidoLlevar();
             }
             if (opc == '3'){//mostrar pedidos
                 System.out.println("Pedidos Comanda");
-                Comanda.mostrarPedido();
+                System.out.println(lisComanda.mostrarPedido());
+                //Comanda.mostrarPedido();
             }
             if (opc == '4'){//mostrar pedidos
                 System.out.println("Pedidos Para llevar");
