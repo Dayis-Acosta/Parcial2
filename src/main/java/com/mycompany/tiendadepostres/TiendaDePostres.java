@@ -29,17 +29,35 @@ public class TiendaDePostres {
         
     }  
     
-     public static void Comanda() {
+    public static void Comanda() {
         ArmarPedido Comanda = new ArmarPedido();
+        String n, ps;
+        int pr, m;
+        n=Input.nextLine("Nombre cliente: ");
+        Cliente c = new Cliente(n, "No necesita", "No necesita");
+        
+        ps = Input.nextLine("Nombre del postre: ");
+        pr = Input.nextInt("Porcion: ");
+
+        Postre p = new Postre(ps, pr);
+        m = Input.nextInt("Numero de mesa: ");
+        
+        Comanda co = new Comanda(m, pr, p, c);
+        Comanda.AgregarPedido(co);
+    }
+    public static void PedidoLlevar() {
+        ArmarPedido PedidoLlevar = new ArmarPedido();
         String n, t, d, ps;
         int pr;
         n=Input.nextLine("Nombre cliente: ");
-        Cliente c = new Cliente(n, "No necesita", "No necesita");
+        t=Input.nextLine("Telefono: ");
+        d=Input.nextLine("Direccion: ");
+        Cliente c = new Cliente(n, t, d);
         
         ps = Input.nextLine("Nombre del postre: ");
         pr = Input.nextInt("Precio: ");
 
         Postre p = new Postre(ps, pr);
-     }
+    }
     
 }
