@@ -6,22 +6,21 @@ import com.murcia.utils.*;
 public class TiendaDePostres {
 
     public static void main(String[] args) {
-        //Prueba de la lista de postres
-        MenuPostres menu = new MenuPostres();
-        System.out.println(menu.mostrarMenu());
-        System.out.println(menu.saboresCheesecake());
-        System.out.println(menu.saboresTorta());
-
         
+        MenuPostres menu = new MenuPostres();
         ArmarPedido lisComanda = new ArmarPedido();
         ArmarPedido lisPedidoLlevar = new ArmarPedido();
         final char SALIR = '5';
         String []opt = {"1. Comanda", "2. Para llevar", "3. Mostrar pedidos comanda", 
             "4. Mostrar pedidos para Llevar", "5. Terminar"};
-        Menu mnu = new Menu(opt, 'V', " ", "Tienda de Postes EeveeBuron");
+        Menu mnu = new Menu(opt, 'V', " ", "TIENDA DE POSTRES EEVEEBURON");
         char opc;
 
         do {
+            System.out.println("________________________________" + "\nMENU");
+            System.out.println(menu.saboresCheesecake());
+            System.out.println(menu.saboresTorta());
+            System.out.println("_________________________________");
             Consola.clrscr(); // Borra pantalla
             Consola.gotoxy(0, 0);
             opc = mnu.select("Su opcion [1-5]: ");

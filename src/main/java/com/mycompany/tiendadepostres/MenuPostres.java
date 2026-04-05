@@ -7,29 +7,28 @@ public class MenuPostres {
     
     
     public MenuPostres() {
-        Pchescake = "Cheesecake";
-        Ptorta = "Torta";    
+        Pchescake = "CHEESECAKE";
+        Ptorta = "TORTA";    
     }
     public String Pchescake () {
-		return "maracuya, fresa, mora, coco";
-	}
+        return "maracuya, fresa, mora, coco";
+    }
+    public String Ptorta () {
+        return "chocolate, vainilla, tresleches, redvelvet";
+    }
 
-	public String Ptorta () {
-		return "chocolate, vainilla, tresleches, redvelvet";
-	}
-
-	//metodo de menu mostrar opciones de postres y
-	public String mostrarMenu() {
-		return "1. Cheesecake\n2. Torta";
-	}
-	
-	//Metodo mostrar sabores menu de Cheesecake y Torta
+    //metodo de menu mostrar opciones de postres y
+    public String mostrarMenu() {
+        return "1. Cheesecake\n2. Torta";
+    }
+    
+    //Metodo mostrar sabores menu de Cheesecake y Torta
     public String saboresCheesecake() {
-        return Pchescake + ": Mora, Maracuyá, Coco, Fresa";
+        return Pchescake + "\nSabores: Mora, Maracuya, Coco y Fresa";
     }    
     
     public String saboresTorta(){
-      return Ptorta + ": Chocolate, Vainilla, Tres Leches, Red Velvet";
+      return Ptorta + "\nSabores: Chocolate, Vainilla, Tres Leches y Red Velvet";
 
     }
     
