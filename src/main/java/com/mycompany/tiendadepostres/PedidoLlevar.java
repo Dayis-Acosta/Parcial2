@@ -16,11 +16,12 @@ public class PedidoLlevar {
        this.Cliente= Cliente;
        this.Cantidad= Cantidad;
    }
-   public String Registrar (String Pedido, String Cliente, int Cantidad ){
-       ListaEnlazada lis = new ColaEnlazada();
-       lis.add(Pedido + ", " + Cliente + ", " +Cantidad);
-       //System.out.println(lis);
-       return lis + ", ";
+   
+   public int getCantidad (int Cantidad){
+       return Cantidad;
+   }
+   public void setCantidad (int Cantidad){
+       this.Cantidad= Cantidad;
    }
    
    public String toString(){
