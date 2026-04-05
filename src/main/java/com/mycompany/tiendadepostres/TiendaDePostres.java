@@ -60,13 +60,13 @@ public class TiendaDePostres {
                 lisPedidoLlevar.AgregarPedidoLlevar(co);
             }
             if (opc == '3'){//mostrar pedidos
-                System.out.println("PEDIDOS COMANDA" + "\n____________________________");
+                System.out.println("____________________________" + "\nPEDIDOS COMANDA");
                 System.out.println(lisComanda.mostrarPedidoComanda());
                 System.out.println("");
                 //Comanda.mostrarPedido();
             }
             if (opc == '4'){//mostrar pedidos
-                System.out.println("PEDIDOS PARA LLEVAR" + "\n____________________________");
+                System.out.println( "____________________________" + "\nPEDIDOS PARA LLEVAR");
                 System.out.println(lisPedidoLlevar.mostrarPedidoLlevar());
                 System.out.println("");
                

@@ -42,9 +42,9 @@ public class Comanda {
     }*/
    
     public String toString(){
-        return "Cliente: " + cliente.InfoComanda() + 
-                "\nPostre Pedido: " + postre +
-                "\nNúmro de mesa: " + nmesa +
-                "\nCandidad de postres: " + cantPostre ;
+        return "\nCliente: " + cliente.InfoComanda() + 
+                "\nPostre del Pedido: " + postre +
+                "\nNumero de mesa: " + nmesa +
+                "\nCandidad de postres: " + cantPostre;
     }
 }

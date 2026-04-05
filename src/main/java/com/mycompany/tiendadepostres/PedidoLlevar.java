@@ -25,8 +25,8 @@ public class PedidoLlevar {
    }
    
    public String toString (){
-       return "Cliente: " + Cliente.InfoPedidoLevar() + 
-               "\nPostre Pedido: " + Pedido +
+       return "\nCliente: " + Cliente.InfoPedidoLevar() + 
+               "\nPostre del Pedido: " + Pedido +
                 "\nCandidad de postres: " + Cantidad ;
    }
     

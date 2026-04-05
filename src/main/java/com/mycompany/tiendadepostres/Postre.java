@@ -26,7 +26,7 @@ public class Postre {
     }
     @Override
     public String toString() {
-        return nombrep + " - " + porciones;
+        return nombrep;
     }
    
     
