@@ -6,6 +6,13 @@ import com.murcia.utils.*;
 public class TiendaDePostres {
 
     public static void main(String[] args) {
+        //Prueba de la lista de postres
+        MenuPostres menu = new MenuPostres();
+        System.out.println(menu.mostrarMenu());
+        System.out.println(menu.saboresCheesecake());
+        System.out.println(menu.saboresTorta());
+
+        
         ArmarPedido Comanda = new ArmarPedido();
         ArmarPedido PedidoLlevar = new ArmarPedido();
         final char SALIR = '5';
