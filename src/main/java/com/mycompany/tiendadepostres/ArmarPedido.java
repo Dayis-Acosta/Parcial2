@@ -31,8 +31,8 @@ public class ArmarPedido {
     }
      public String mostrarPedidoComanda (){
         String resultado = "";
-        for (int i=0; i < armarPedidoLlevar.size(); i++){
-            resultado += armarPedidoLlevar.get(i) + "\n__________________________________";
+        for (int i=0; i < armarPedidoComanda.size(); i++){
+            resultado += armarPedidoComanda.get(i) + "\n__________________________________";
         } 
         return resultado;
     }
