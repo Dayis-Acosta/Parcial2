@@ -5,7 +5,7 @@ public class MenuPostres {
     private String Pchescake;
     private String Ptorta;
     
-    public MenuPostres() {}
+    
     public MenuPostres() {
         Pchescake = "Cheesecake";
         Ptorta = "Torta";    
@@ -17,4 +17,5 @@ public class MenuPostres {
     public String Ptorta (){
         return chocolate, vainilla, tresleches, redvelvet;
     }
+    
 }
