@@ -6,7 +6,8 @@ import com.murcia.utils.*;
 public class TiendaDePostres {
 
     public static void main(String[] args) {
-        /*final char SALIR = '3';
+        
+        final char SALIR = '3';
         String []opt = {"1. Comanda", "2. Para llevar", "3. Terminar"};
         Menu mnu = new Menu(opt, 'V', " ", "Tienda de Postes EeveeBuron");
         char opc;
@@ -16,27 +17,29 @@ public class TiendaDePostres {
             Consola.gotoxy(0, 0);
             opc = mnu.select("Su opción [1-3]: ");
             Input.nextLine("");
-            if (opc == '1'){
-                //Comanda();
-                System.out.println("Comanda");
+            if (opc == '1'){ //Comanda
+                Comanda();
+                
             }    
-            if (opc == '2'){
-               //PedidoLevar();
-               System.out.println("pedido llevar");
+            if (opc == '2'){//pedido llevar
+               PedidoLlevar();
+               
             }
-        } while (opc != SALIR);*/
-        String a, b, c;
-        PedidoLlevar p=new PedidoLlevar();
-        for (int x=1; x<=2; x++){
-           a=Input.nextLine("Ingrese postre: ");
-           b=Input.nextLine("Ingrese Datos: ");
-           c=Input.nextLine("Ingrese cantidad: ");
-           p.Registrar(a, b, 2);
-           System.out.println(p); 
-        }
+        } while (opc != SALIR);
         
-        
-     
     }  
+    
+     public static void Comanda() {
+        ArmarPedido Comanda = new ArmarPedido();
+        String n, t, d, ps;
+        int pr;
+        n=Input.nextLine("Nombre cliente: ");
+        Cliente c = new Cliente(n, "No necesita", "No necesita");
+        
+        ps = Input.nextLine("Nombre del postre: ");
+        pr = Input.nextInt("Precio: ");
+
+        Postre p = new Postre(ps, pr);
+     }
     
 }
