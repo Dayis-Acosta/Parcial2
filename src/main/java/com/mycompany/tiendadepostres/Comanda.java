@@ -4,15 +4,15 @@ package com.mycompany.tiendadepostres;
 
 public class Comanda {
     private int nmesa;
-    private int cantMesa;
+    private int cantPostre;
     private Postre postre;
     private Cliente cliente;
     
     
     public Comanda(){}
-    public Comanda(int nmesa, int cantmesa, Postre postre, Cliente cliente) {
+    public Comanda(int nmesa, int cantPostre, Postre postre, Cliente cliente) {
         this.nmesa = nmesa;
-        this.cantMesa = cantmesa;
+        this.cantPostre = cantPostre;
         this.postre = postre;
         this.cliente = cliente;
     }
@@ -25,17 +25,17 @@ public class Comanda {
         this.nmesa = nmesa;
     }
 
-    public int getCantmesa() {
-        return cantMesa;
+    public int getCantPostre() {
+        return cantPostre;
     }
 
-    public void setCantmesa(int cantmesa) {
-        this.cantMesa = cantmesa;
+    public void setCantPostre(int cantPostre) {
+        this.cantPostre = cantPostre;
     }
    
     public String mostrarComanda(){
         return "Cliente: " + cliente.InfoComanda() + 
                 "\nNúmro de mesa: " + nmesa +
-                "\nCandidad de postres: " + cantMesa ;
+                "\nCandidad de postres: " + cantPostre ;
     }
 }
