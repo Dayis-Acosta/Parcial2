@@ -8,6 +8,7 @@ public class Comanda {
     private Postre postre;
     private Cliente cliente;
     
+    
     public Comanda(){}
     public Comanda(int nmesa, int cantmesa, Postre postre, Cliente cliente) {
         this.nmesa = nmesa;
@@ -32,8 +33,9 @@ public class Comanda {
         this.cantMesa = cantmesa;
     }
    
-    public void mostrarComanda(){
-        System.out.println("Número de mesa: " + nmesa);
-        System.out.println("Cantidad en mesa: " + cantMesa);
+    public String mostrarComanda(){
+        return "Cliente: " + cliente.InfoComanda() + 
+                "\nNúmro de mesa: " + nmesa +
+                "\nCandidad de postres: " + cantMesa ;
     }
 }
