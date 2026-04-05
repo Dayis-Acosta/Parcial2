@@ -14,7 +14,7 @@ public class TiendaDePostres {
 
         
         ArmarPedido lisComanda = new ArmarPedido();
-        ArmarPedido PedidoLlevar = new ArmarPedido();
+        ArmarPedido lisPedidoLlevar = new ArmarPedido();
         final char SALIR = '5';
         String []opt = {"1. Comanda", "2. Para llevar", "3. Mostrar pedidos comanda", 
             "4. Mostrar pedidos para Llevar", "5. Terminar"};
@@ -24,11 +24,9 @@ public class TiendaDePostres {
         do {
             Consola.clrscr(); // Borra pantalla
             Consola.gotoxy(0, 0);
-            opc = mnu.select("Su opción [1-5]: ");
+            opc = mnu.select("Su opcion [1-5]: ");
             Input.nextLine("");
             if (opc == '1'){ //Comanda
-                //Comanda();
-                
                 String n, ps;
                 int pr, m;
                 
@@ -46,38 +44,35 @@ public class TiendaDePostres {
                 
             }    
             if (opc == '2'){//pedido llevar
-               PedidoLlevar();
+               String n, t, d, ps;
+               int pr;
+               
+               n=Input.nextLine("Nombre cliente: ");
+               t=Input.nextLine("Telefono: ");
+               d=Input.nextLine("Direccion: ");
+               Cliente c = new Cliente(n, t, d);
+               
+               ps = Input.nextLine("Nombre del postre: ");
+               pr = Input.nextInt("Precio: ");
+               Postre p = new Postre(ps, pr);
+               
+               PedidoLlevar co = new PedidoLlevar(p, c, pr);
+                lisComanda.AgregarPedido(co);
             }
             if (opc == '3'){//mostrar pedidos
-                System.out.println("Pedidos Comanda");
+                System.out.println("PEDIDOS COMANDA" + "\n____________________________");
                 System.out.println(lisComanda.mostrarPedido());
+                System.out.println("");
                 //Comanda.mostrarPedido();
             }
             if (opc == '4'){//mostrar pedidos
-                System.out.println("Pedidos Para llevar");
-               PedidoLlevar.mostrarPedido();
+                System.out.println("PEDIDOS PARA LLEVAR" + "\n____________________________");
+                System.out.println(lisPedidoLlevar.mostrarPedido());
+                System.out.println("");
+               
             }
         } while (opc != SALIR);
         
-        
     }  
-    
-    public static String Comanda() {
-        return null;
-    }
-    public static void PedidoLlevar() {
-        ArmarPedido PedidoLlevar = new ArmarPedido();
-        String n, t, d, ps;
-        int pr;
-        n=Input.nextLine("Nombre cliente: ");
-        t=Input.nextLine("Telefono: ");
-        d=Input.nextLine("Direccion: ");
-        Cliente c = new Cliente(n, t, d);
-        
-        ps = Input.nextLine("Nombre del postre: ");
-        pr = Input.nextInt("Precio: ");
-
-        Postre p = new Postre(ps, pr);
-    }
     
 }
