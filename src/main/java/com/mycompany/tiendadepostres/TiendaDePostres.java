@@ -8,7 +8,7 @@ public class TiendaDePostres {
     public static void main(String[] args) {
         
         MenuPostres menu = new MenuPostres();
-        Comanda lisComanda = new Comanda();
+        ArmarPedido lisComanda = new ArmarPedido();
         ArmarPedido lisPedidoLlevar = new ArmarPedido();
         
         final char SALIR = '5';
@@ -34,13 +34,13 @@ public class TiendaDePostres {
                 Cliente c = new Cliente(n, "No necesita", "No necesita");
                 
                 ps = Input.nextLine("Nombre del postre: ");
-                pr = Input.nextInt("Porcion: ");
+                pr = Input.nextInt("Cantidad de porciones: ");
                 Postre p = new Postre(ps, pr);
                 
                 m = Input.nextInt("Numero de mesa: ");
                 
                 Comanda co = new Comanda(m, pr, p, c);
-                lisComanda.AgregarPedido(co);
+                lisComanda.AgregarPedidoComanda(co);
                 
             }    
             if (opc == '2'){//pedido llevar
@@ -53,21 +53,21 @@ public class TiendaDePostres {
                Cliente c = new Cliente(n, t, d);
                
                ps = Input.nextLine("Nombre del postre: ");
-               pr = Input.nextInt("Precio: ");
+               pr = Input.nextInt("Cantidad de porciones: ");
                Postre p = new Postre(ps, pr);
                
                PedidoLlevar co = new PedidoLlevar(p, c, pr);
-                lisComanda.AgregarPedido(co);
+                lisComanda.AgregarPedidoLlevar(co);
             }
             if (opc == '3'){//mostrar pedidos
                 System.out.println("PEDIDOS COMANDA" + "\n____________________________");
-                System.out.println(lisComanda.mostrarComanda());
+                System.out.println(lisComanda.mostrarPedidoComanda());
                 System.out.println("");
                 //Comanda.mostrarPedido();
             }
             if (opc == '4'){//mostrar pedidos
                 System.out.println("PEDIDOS PARA LLEVAR" + "\n____________________________");
-                System.out.println(lisPedidoLlevar.mostrarPedido());
+                System.out.println(lisPedidoLlevar.mostrarPedidoLlevar());
                 System.out.println("");
                
             }

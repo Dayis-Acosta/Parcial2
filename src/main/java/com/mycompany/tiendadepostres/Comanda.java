@@ -9,7 +9,7 @@ public class Comanda {
     private int cantPostre;
     private Postre postre;
     private Cliente cliente;
-    private ListaEnlazada armarPedido;
+    //private ListaEnlazada armarPedido;
     
     
     public Comanda(){}
@@ -36,10 +36,10 @@ public class Comanda {
     public void setCantPostre(int cantPostre) {
         this.cantPostre = cantPostre;
     }
-    public void AgregarPedido (Object pedido) {
+    /*public void AgregarPedido (Object pedido) {
         ListaEnlazada armarPedido = new ColaEnlazada();
         armarPedido.add(pedido);
-    }
+    }*/
    
     public String mostrarComanda(){
         return "Cliente: " + cliente.InfoComanda() + 
