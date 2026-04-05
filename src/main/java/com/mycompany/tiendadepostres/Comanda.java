@@ -33,7 +33,7 @@ public class Comanda {
         this.cantPostre = cantPostre;
     }
    
-    public String toString(){
+    public String mostrarComanda(){
         return "Cliente: " + cliente.InfoComanda() + 
                 "\nPostre Pedido: " + postre +
                 "\nNúmro de mesa: " + nmesa +
