@@ -27,7 +27,19 @@ public class TiendaDePostres {
             opc = mnu.select("Su opción [1-5]: ");
             Input.nextLine("");
             if (opc == '1'){ //Comanda
-                Comanda();
+                //Comanda();
+                String n, ps;
+                int pr, m;
+                n=Input.nextLine("Nombre cliente: ");
+                Cliente c = new Cliente(n, "No necesita", "No necesita");
+                
+                ps = Input.nextLine("Nombre del postre: ");
+                pr = Input.nextInt("Porcion: ");
+                Postre p = new Postre(ps, pr);
+                
+                m = Input.nextInt("Numero de mesa: ");
+                Comanda co = new Comanda(m, pr, p, c);
+                Comanda.AgregarPedido(co);
             }    
             if (opc == '2'){//pedido llevar
                PedidoLlevar();
@@ -42,24 +54,11 @@ public class TiendaDePostres {
             }
         } while (opc != SALIR);
         
+        
     }  
     
     public static String Comanda() {
-        ArmarPedido Comanda = new ArmarPedido();
-        String n, ps;
-        int pr, m;
-        n=Input.nextLine("Nombre cliente: ");
-        Cliente c = new Cliente(n, "No necesita", "No necesita");
-        
-        ps = Input.nextLine("Nombre del postre: ");
-        pr = Input.nextInt("Porcion: ");
-
-        Postre p = new Postre(ps, pr);
-        m = Input.nextInt("Numero de mesa: ");
-        
-        Comanda co = new Comanda(m, pr, p, c);
-        Comanda.AgregarPedido(co);
-        return Comanda + "";
+        return null;
     }
     public static void PedidoLlevar() {
         ArmarPedido PedidoLlevar = new ArmarPedido();
