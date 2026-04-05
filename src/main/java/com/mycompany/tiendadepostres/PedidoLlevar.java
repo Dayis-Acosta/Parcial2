@@ -24,8 +24,10 @@ public class PedidoLlevar {
        this.Cantidad= Cantidad;
    }
    
-   public String toString(){
-       return "";
+   public String mostrarPedidoLevar (){
+       return "Cliente: " + Cliente.InfoComanda() + 
+               "\nPostre Pedido: " + Pedido +
+                "\nCandidad de postres: " + Cantidad ;
    }
-    //guarda en una lista de pedido, la informacion del cliente
+    
 }
