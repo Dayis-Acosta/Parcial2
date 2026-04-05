@@ -57,7 +57,7 @@ public class TiendaDePostres {
                Postre p = new Postre(ps, pr);
                
                PedidoLlevar co = new PedidoLlevar(p, c, pr);
-                lisComanda.AgregarPedidoLlevar(co);
+                lisPedidoLlevar.AgregarPedidoLlevar(co);
             }
             if (opc == '3'){//mostrar pedidos
                 System.out.println("PEDIDOS COMANDA" + "\n____________________________");
