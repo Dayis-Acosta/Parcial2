@@ -5,7 +5,7 @@ import com.murcia.utils.*;
 
 public class PedidoLlevar {
     
-   private String Pedido;
+   private Postre Pedido;
    private Cliente Cliente;
    private int Cantidad;
    
@@ -17,7 +17,7 @@ public class PedidoLlevar {
        // cantidad de postres que quiere el cliente en el pedido
        return CantRequerida;
    }
-   public PedidoLlevar (String Pedido, Cliente Cliente, int Cantidad){
+   public PedidoLlevar (Postre Pedido, Cliente Cliente, int Cantidad){
        this.Pedido = Pedido;
        this.Cliente= Cliente;
        this.Cantidad= Cantidad;

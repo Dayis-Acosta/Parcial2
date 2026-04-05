@@ -35,8 +35,10 @@ public class Cliente {
     public void setdirecCliente(String direcCliente){
          this.direcCliente = direcCliente;
     }
-    
-    public String toString(){
+    public String InfoComanda (){
+     return "Nombre del Cliente: " + nomCliente;   
+    }
+    public String InfoPedidoLevar(){
     return "Nombre del Cliente: " + nomCliente + 
             "Telefono del Cliente: " + telCliente + 
             "Direccion: " + direcCliente;
