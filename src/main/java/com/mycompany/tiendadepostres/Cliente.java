@@ -40,8 +40,8 @@ public class Cliente {
     }
     public String InfoPedidoLevar(){
     return "Nombre del Cliente: " + nomCliente + 
-            "Telefono del Cliente: " + telCliente + 
-            "Direccion: " + direcCliente;
+            "\nTelefono del Cliente: " + telCliente + 
+            "\nDireccion: " + direcCliente;
     }
     
     

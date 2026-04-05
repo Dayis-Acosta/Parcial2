@@ -9,14 +9,8 @@ public class PedidoLlevar {
    private Cliente Cliente;
    private int Cantidad;
    
-  
    //metodo
    public PedidoLlevar(){}
-   
-   public int CantDeCadaPostres(int CantRequerida){
-       // cantidad de postres que quiere el cliente en el pedido
-       return CantRequerida;
-   }
    public PedidoLlevar (Postre Pedido, Cliente Cliente, int Cantidad){
        this.Pedido = Pedido;
        this.Cliente= Cliente;
