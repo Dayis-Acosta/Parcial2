@@ -25,7 +25,7 @@ public class PedidoLlevar {
    }
    
    public String mostrarPedidoLevar (){
-       return "Cliente: " + Cliente.InfoComanda() + 
+       return "Cliente: " + Cliente.InfoPedidoLevar() + 
                "\nPostre Pedido: " + Pedido +
                 "\nCandidad de postres: " + Cantidad ;
    }

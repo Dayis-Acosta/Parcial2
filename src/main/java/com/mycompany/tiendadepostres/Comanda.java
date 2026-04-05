@@ -35,6 +35,7 @@ public class Comanda {
    
     public String mostrarComanda(){
         return "Cliente: " + cliente.InfoComanda() + 
+                "\nPostre Pedido: " + postre +
                 "\nNúmro de mesa: " + nmesa +
                 "\nCandidad de postres: " + cantPostre ;
     }
