@@ -13,7 +13,7 @@ public class TiendaDePostres {
         
         final char SALIR = '5';
         String []opt = {"1. Comanda", "2. Para llevar", "3. Mostrar pedidos comanda", 
-            "4. Mostrar pedidos para Llevar", "5. Terminar"};
+            "4. Mostrar pedidos para Llevar", "5. Buscar Pedidos Llevar ", "6. Salir"};
         Menu mnu = new Menu(opt, 'V', " ", "TIENDA DE POSTRES EEVEEBURON");
         char opc;
 
@@ -24,7 +24,7 @@ public class TiendaDePostres {
             System.out.println("_________________________________");
             Consola.clrscr(); // Borra pantalla
             Consola.gotoxy(0, 0);
-            opc = mnu.select("Su opcion [1-5]: ");
+            opc = mnu.select("Su opcion [1-6]: ");
             Input.nextLine("");
             if (opc == '1'){ //Comanda
                 String n, ps;
@@ -70,6 +70,11 @@ public class TiendaDePostres {
                 System.out.println(lisPedidoLlevar.mostrarPedidoLlevar());
                 System.out.println("");
                
+            }
+            if (opc == '5'){//mostrar pedidos buscar
+                System.out.println( "____________________________" + "\bPEDIDOS PARA LLEVAR");
+                System.out.println(lisPedidoLlevar.mostrarPedidoLlevar());
+                System.out.println("");
             }
         } while (opc != SALIR);
         

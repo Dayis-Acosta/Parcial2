@@ -1,0 +1,20 @@
+PREGUNTA (1) Referir al menos una nueva clase, diferente en las referidas de la libreria "mi-libreria.jar", que haya de java incluido en su proyecto y explique de manera general sus nuevos atribbutos y los metodos (referir la fuente)
+
+RESPUESTA 1# 
+-Se creo una clase llamada Cliente { permite ingresar los datos dependiendo si es pedido llevar o comanda} (Cliente.java)
+-Atributos tipo string donde esta nomCliente, telCliente, direcCliente {para definir el nombre del cliente, el telefonon del cliente, la direccion del cliente para poder ingresarlos }
+(Cliente.java linea 5 -9)
+-Metodos (Cliente.java linea 11 - 45)
+-constructor {definir los datos para poder ingresarlos} (Cliente.java linea 15 -19)
+-get y set{retorna los atributos y el set los modifica pero en este caso no es nesesario modificarlos atribbutos} (Cliente,java linea 23 -37)
+-InfoComanda {Permite el ingresar solo es nomCliente por lo que comanda ingresara solo el nombre cuando se escoja la comada} (Cliente.java linea 38 - 40)
+-InfoPedidoLevar {permite que cuando se seleccione pedido llevar se podra ingresar nomCliente, telCliente, direcCliente } (Cliente.java linea 41 - 45)
+
+=================================================================================================================================================================================================================================================
+
+PREGUNTA (2) si incluyo algun metodo de busqueda explique su objetivo, valor retorno y parametros (cada uno de ellos); Refiera las fuentes (donde se define y se llama)
+
+RESPUESTA 2# 
+
+
+

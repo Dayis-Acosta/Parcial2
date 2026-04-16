@@ -50,7 +50,7 @@ public class ArmarPedido {
             if (Cliente.InfoPedidoLevar().equals(info)){
             pd += armarPedidoLlevar.get(i) +  "\n__________________________________";
             } 
-              
+         return pd;     
                
             
         } 
