@@ -11,7 +11,7 @@ public class TiendaDePostres {
         ArmarPedido lisComanda = new ArmarPedido();
         ArmarPedido lisPedidoLlevar = new ArmarPedido();
         
-        final char SALIR = '5';
+        final char SALIR = '6';
         String []opt = {"1. Comanda", "2. Para llevar", "3. Mostrar pedidos comanda", 
             "4. Mostrar pedidos para Llevar", "5. Buscar Pedidos Llevar ", "6. Salir"};
         Menu mnu = new Menu(opt, 'V', " ", "TIENDA DE POSTRES EEVEEBURON");
@@ -73,7 +73,7 @@ public class TiendaDePostres {
             }
             if (opc == '5'){//mostrar pedidos buscar
                 System.out.println( "____________________________" + "\bPEDIDOS PARA LLEVAR");
-                System.out.println(lisPedidoLlevar.mostrarPedidoLlevar());
+                System.out.println(lisPedidoLlevar.BuscarClientePedidollevar());
                 System.out.println("");
             }
         } while (opc != SALIR);
