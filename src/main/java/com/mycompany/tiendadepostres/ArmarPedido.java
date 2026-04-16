@@ -6,6 +6,7 @@ import com.murcia.utils.*;
 public class ArmarPedido {
     private ListaEnlazada armarPedidoLlevar;
     private ListaEnlazada armarPedidoComanda;
+     private Cliente Cliente;
     
     public ArmarPedido(){
         armarPedidoLlevar = new ColaEnlazada();
@@ -36,4 +37,26 @@ public class ArmarPedido {
         } 
         return resultado;
     }
+     
+     //Metodo buscar
+    
+        //Recorrer una lista
+    public void BuscarClientePedidoLlevar (String info){
+        //Recorrer una lista 
+        String pd = " "; 
+               
+        for (int i=0; i < armarPedidoLlevar.size(); i++ ){
+           // System.out.println(armarPedidoLlevar[i]); 
+            if (Cliente.InfoPedidoLevar().equals(info)){
+            pd += armarPedidoLlevar.get(i) +  "\n__________________________________";
+            } 
+              
+               
+            
+        } 
+    }       
+           
+               
+    
+        
 }
